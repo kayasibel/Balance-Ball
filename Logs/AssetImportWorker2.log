@@ -1,0 +1,97 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/respin/6000.3.6f1-732c1ec89f18' branch; Version is '6000.3.6f1 (bbb010bdb8a3) revision 12300304'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-SIBEL" at "2026-02-26T16:32:04.3387673Z"
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'tr' Physical Memory: 65451 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+-adb2
+-batchMode
+5
+========================================================================
+Received Import Request.
+  Time since last request: 222.805609 seconds.
+  path: Assets/Plugins/Android/mainTemplate.gradle
+  artifactKey: Guid(ee0ef2da3c657a14793b408c588d3827) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
+Start importing Assets/Plugins/Android/mainTemplate.gradle using Guid(ee0ef2da3c657a14793b408c588d3827) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '32115bbe636109fff94fd6793d976a6a') in 0.0043741 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 579.884187 seconds.
+  path: Assets/Prefabs/DOORpref.prefab
+  artifactKey: Guid(90d116ffe59a6c144b7a2c9c4aec81c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DOORpref.prefab using Guid(90d116ffe59a6c144b7a2c9c4aec81c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb692b306038c0563a50089531eef7a2') in 0.5061001 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 323
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefabs/Square Hole 4x4.prefab
+  artifactKey: Guid(2f25a649537d4154d8dd3d8ecb3d4b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Square Hole 4x4.prefab using Guid(2f25a649537d4154d8dd3d8ecb3d4b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc89ae6474c3b34c4fb290c1ed5481ff') in 0.0921789 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Prefabs/Ground Path Corner (1).prefab
+  artifactKey: Guid(4a191ed50202fe14683a15c9bc6fc7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ground Path Corner (1).prefab using Guid(4a191ed50202fe14683a15c9bc6fc7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7c9602164fd54717883aa8c5a978176') in 0.0424721 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Prefabs/Stairs 2.prefab
+  artifactKey: Guid(e62ab51824d53de42b3010799f52f0d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Stairs 2.prefab using Guid(e62ab51824d53de42b3010799f52f0d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '242ba2ae7ecfc0e1588f6842ec0b21ad') in 0.02594 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Prefabs/WPoint 2x1.prefab
+  artifactKey: Guid(5fcc46caf28c7b443a00cdc666a71495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WPoint 2x1.prefab using Guid(5fcc46caf28c7b443a00cdc666a71495) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f776afab1ecfea03eeb4e853cff9df86') in 0.0274234 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Prefabs/WPground.prefab
+  artifactKey: Guid(c67ddcda5147c25469ac58000924b8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WPground.prefab using Guid(c67ddcda5147c25469ac58000924b8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '81974e4edec4d4676e3b33a3c1e2de2d') in 0.0283032 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Prefabs/Ground + Dark 4x4.prefab
+  artifactKey: Guid(bd1af57145d6a0244a7e6286f044210e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ground + Dark 4x4.prefab using Guid(bd1af57145d6a0244a7e6286f044210e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2cf7e70165477a71fd0337d1ed9a4671') in 0.0263531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefabs/Ground Path One.prefab
+  artifactKey: Guid(9299d3fce4520354195e65cef0782dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ground Path One.prefab using Guid(9299d3fce4520354195e65cef0782dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d67b3242a9136d8b159e1917e02528b') in 0.0415572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefabs/WPground 1.prefab
+  artifactKey: Guid(c5f6a3c01d5158c41a70be038b4bc4fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WPground 1.prefab using Guid(c5f6a3c01d5158c41a70be038b4bc4fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '01f927d1fcc4003bd58df82967f8516d') in 0.0325213 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefabs/rotateblock 1.prefab
+  artifactKey: Guid(a84a6a04f2038474da67977f89f50a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rotateblock 1.prefab using Guid(a84a6a04f2038474da67977f89f50a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd774aaa0d916da535159b5554278a65') in 0.0333003 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+

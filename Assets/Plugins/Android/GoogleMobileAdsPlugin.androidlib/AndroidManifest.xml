@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.unity.ads">
+  <uses-sdk android:minSdkVersion="23" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+  <application>
+    <uses-library android:required="false" android:name="org.apache.http.legacy" />
+    <!-- Google Mobile Ads App ID -->
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9732851153400143~2793553335" />
+    <meta-data android:name="com.google.unity.ads.UNITY_VERSION" android:value="2023.1.18f1" />
+  </application>
+</manifest>
