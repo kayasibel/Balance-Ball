@@ -66,21 +66,37 @@ public class AdmobManager : MonoBehaviour
                 rewardedAd.Show((Reward reward) =>
                 {
                     Debug.Log("User earned reward: " + reward.Amount);
-                    onRewardedCallback?.Invoke();
+                    InvokeRewardCallback();
                     // Reload after show
                     LoadRewardedAd();
                 });
+                return;
             }
             catch (Exception e)
             {
                 Debug.LogWarning("ShowRewardedAd failed (maybe different SDK API): " + e);
-                LoadRewardedAd();
             }
         }
         else
         {
             Debug.Log("Rewarded ad is not ready.");
-            LoadRewardedAd();
+        }
+
+        // Reklam gosterilemedi. Oyuncuyu bekletme, ilerlemesine izin ver;
+        // aksi halde level gecisi callback'e bagli oldugu icin oyun kilitleniyor.
+        LoadRewardedAd();
+        InvokeRewardCallback();
+    }
+
+    // Callback'i en fazla bir kez calistirir.
+    private void InvokeRewardCallback()
+    {
+        Action cb = onRewardedCallback;
+        onRewardedCallback = null;
+
+        if (cb != null)
+        {
+            cb();
         }
     }
 }
