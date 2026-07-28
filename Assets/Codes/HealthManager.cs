@@ -15,6 +15,7 @@ using UnityStandardAssets.Vehicles.Ball;
 
         private bool isRespawning;
         private Vector3 respawnPoint;
+        private Rigidbody playerRb;
 
 
         public GameObject thePlayer;
@@ -26,7 +27,10 @@ using UnityStandardAssets.Vehicles.Ball;
         {
             currentHealth = maxHealth;
 
-            respawnPoint = new Vector3(0.0f, 0f, 0.0f);
+            playerRb = thePlayer.GetComponent<Rigidbody>();
+
+            // Ilk checkpoint'e ulasilmadan olunurse dunya merkezine degil, baslangic noktasina don.
+            respawnPoint = thePlayer.transform.position;
 
             HeartSystem();
 
@@ -65,8 +69,16 @@ using UnityStandardAssets.Vehicles.Ball;
             yield return new WaitForSeconds(respawnLength);//respawnLength uzunluğu kadar bekle
             isRespawning = false;
 
-            thePlayer.gameObject.SetActive(true);
+            //once konumu ayarla, sonra aktif et. Ters sirada top bir kare olum noktasinda canlaniyor.
             thePlayer.transform.position = respawnPoint;//playerı respawnpoint noktasına götür
+            thePlayer.gameObject.SetActive(true);
+
+            //SetActive(false) hizi temizlemez; olum anindaki hiz korunur. Fizik adimi gelmeden sifirla.
+            if (playerRb != null)
+            {
+                playerRb.linearVelocity = Vector3.zero;
+                playerRb.angularVelocity = Vector3.zero;
+            }
         }
 
 

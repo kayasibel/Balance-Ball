@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraRotate : MonoBehaviour
@@ -7,21 +5,51 @@ public class CameraRotate : MonoBehaviour
     public VariableJoystick variableJoystick;
     public Transform playerObjesi;
     public Transform kameraObjesi;
-    public float speed;
 
-    void Update()
+    [Header("Orbit")]
+    public float distance = 7f;
+    public float pivotHeight = 2f;
+
+    [Header("Rotation")]
+    public float rotateSpeed = 120f;   // derece / saniye
+    public float defaultPitch = 20f;   // kameranin X rotation degeri
+    public bool allowVerticalRotation = false;
+    public float minPitch = 5f;
+    public float maxPitch = 45f;
+
+    private float yaw;
+    private float pitch;
+
+    void Start()
     {
-        //this will make the camera look "inwards" towards Pivot
-        transform.position = playerObjesi.transform.position + new Vector3(0, 2.5f, -7);
+        yaw = kameraObjesi.eulerAngles.y;
+        pitch = defaultPitch;
+        Uygula();
+    }
 
+    void LateUpdate()
+    {
+        if (variableJoystick != null)
+        {
+            yaw += variableJoystick.Horizontal * rotateSpeed * Time.deltaTime;
 
-        kameraObjesi.transform.RotateAround(playerObjesi.transform.position,
-                                            kameraObjesi.transform.up,
-                                            variableJoystick.Horizontal * speed);
+            if (allowVerticalRotation)
+            {
+                pitch += variableJoystick.Vertical * rotateSpeed * Time.deltaTime;
+                pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+            }
+        }
 
-        kameraObjesi.transform.RotateAround(playerObjesi.transform.position,
-                                        kameraObjesi.transform.right,
-                                        variableJoystick.Vertical * speed);
+        Uygula();
+    }
 
+    // Aci degerlerinden transform'u her karede sifirdan kurar, boylece birikimli sapma olmaz.
+    private void Uygula()
+    {
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
+        Vector3 pivot = playerObjesi.position + Vector3.up * pivotHeight;
+
+        kameraObjesi.position = pivot + rotation * (Vector3.back * distance);
+        kameraObjesi.rotation = rotation;
     }
 }

@@ -825,6 +825,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8029435534663596747, guid: 9a8ed9e7cf60f0c4a8cab5a3d7630f66, type: 3}
+      propertyPath: defaultPitch
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029435534663596747, guid: 9a8ed9e7cf60f0c4a8cab5a3d7630f66, type: 3}
       propertyPath: playerObjesi
       value: 
       objectReference: {fileID: 1239180151}
