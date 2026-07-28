@@ -1,88 +1,63 @@
 # Balance Ball 3D
 
-Unity ile geliştirilmiş 3B denge/parkur oyunu. Topu joystick ile yönlendirip düşmeden bölüm sonuna ulaşmaya çalışırsınız. Süre sınırı, can sistemi ve checkpoint mekaniği vardır.
+A 3D balance and obstacle course game built with Unity. Steer the ball with the joystick and reach the end of each level without falling off. Features a time limit, a health system and checkpoints.
 
-## 🎮 Tarayıcıda Oyna
+## 🎮 Play in Your Browser
 
-**[▶ Oyunu WebGL ile oyna](https://kayasibel.github.io/Balance-Ball/WebGL/)**
+**[▶ Play the WebGL build](https://kayasibel.github.io/Balance-Ball/WebGL/)**
 
-Kurulum gerektirmez, doğrudan tarayıcıda çalışır. İlk açılışta oyun dosyaları indirileceği için birkaç saniye sürebilir.
+No installation required — it runs directly in the browser. The first load may take a few seconds while the game files download.
 
-> Masaüstü tarayıcılarda Chrome, Edge ve Firefox ile test edilmiştir. Mobil tarayıcılarda WebGL performansı cihaza göre değişebilir; mobil için Play Store sürümü önerilir.
+> Tested on desktop Chrome, Edge and Firefox. WebGL performance on mobile browsers varies by device; the Play Store build is recommended for mobile.
 
 ## 📱 Android
 
-Oyunun Android sürümü Google Play'de yayında:
+The Android version is live on Google Play:
 
-**[Google Play'de görüntüle](https://play.google.com/store/apps/details?id=com.SibelKaya.Ballance3D)**
+**[View on Google Play](https://play.google.com/store/apps/details?id=com.SibelKaya.Ballance3D)**
 
-## Oynanış
+## Gameplay
 
 | | |
 |---|---|
-| **Hareket** | Sol joystick — topa tork uygulanır |
-| **Kamera** | Sağ joystick — top etrafında yatay dönüş |
-| **Amaç** | Süre dolmadan bitiş noktasına ulaşmak |
-| **Can** | Tehlikeye değince can azalır, son checkpoint'ten devam edilir |
-| **Süre** | Haritadaki toplanabilirler +5 saniye kazandırır |
+| **Movement** | Left joystick — applies torque to the ball |
+| **Camera** | Right joystick — orbits horizontally around the ball |
+| **Goal** | Reach the finish before the timer runs out |
+| **Health** | Hitting a hazard costs health and returns you to the last checkpoint |
+| **Time** | Collectibles scattered across the level grant +5 seconds |
 
-## Teknik Detaylar
+## Technical Details
 
 - **Unity 6000.3.6f1** (Unity 6.3 LTS)
-- **Bölümler:** 20 ana bölüm + ekstra bölümler, ana menü ve bölüm seçme ekranı
-- **Fizik:** Rigidbody tabanlı top kontrolü (tork ile hareket)
-- **Kamera:** Oyuncu etrafında yaw/pitch tabanlı orbit kamera
-- **Reklam:** Google Mobile Ads (ödüllü reklam) — yalnızca Android
+- **Levels:** 20 main levels plus extra levels, a main menu and a level select screen
+- **Physics:** Rigidbody-based ball control driven by torque
+- **Camera:** Yaw/pitch orbit camera that rebuilds its transform each frame, so the pitch angle stays fixed and roll never drifts
+- **Ads:** Google Mobile Ads (rewarded) — Android only
 - **Scripting Backend:** IL2CPP
 
-### Android build ayarları
+### Android build settings
 
-| Ayar | Değer |
+| Setting | Value |
 |---|---|
 | Target SDK | 36 (Android 16) |
 | Min SDK | 25 (Android 7.1) |
-| Mimari | ARMv7 + ARM64 |
+| Architectures | ARMv7 + ARM64 |
 | Format | Android App Bundle (.aab) |
 
-## Projeyi Derleme
-
-Depoyu klonlayıp Unity Hub üzerinden **Unity 6000.3.6f1** ile açın.
-
-### WebGL
-
-```
-File > Build Settings > WebGL > Switch Platform > Build
-```
-
-Çıktı klasörü olarak depo kökündeki `WebGL/` seçilmelidir. GitHub Pages `Content-Encoding` başlığı ayarlayamadığı için Player Settings'te şu ayarlar zorunludur:
-
-- **Compression Format:** Gzip
-- **Decompression Fallback:** açık
-
-Bu ikisi olmadan yayınlanan sayfa yüklenmeden takılır.
-
-### Android
-
-```
-File > Build Settings > Android > Switch Platform > Build
-```
-
-İmzalama için `Player Settings > Publishing Settings` altında keystore tanımlanmalıdır. Keystore dosyaları depoya dahil değildir (`.gitignore`).
-
-## Proje Yapısı
+## Project Structure
 
 ```
 Assets/
-├── Codes/          Oyun scriptleri (kamera, can, checkpoint, menü, reklam)
-├── Scenes/         Ana menü, bölümler, bölüm seçme
-│   └── ExtraLvl/   Ekstra bölümler
-├── Prefabs/        Top, kamera, UI prefab'ları
-├── Asset/          Joystick paketi ve Standard Assets
-└── Plugins/        Android manifest ve Gradle şablonları
+├── Codes/          Game scripts (camera, health, checkpoints, menus, ads)
+├── Scenes/         Main menu, levels, level select
+│   └── ExtraLvl/   Extra levels
+├── Prefabs/        Ball, camera and UI prefabs
+├── Asset/          Joystick Pack and Standard Assets
+└── Plugins/        Android manifests and Gradle templates
 
-WebGL/              Yayınlanan WebGL build (GitHub Pages)
+WebGL/              Published WebGL build (served by GitHub Pages)
 ```
 
-## Lisans
+## License
 
-Bu depodaki üçüncü taraf paketler (Joystick Pack, Unity Standard Assets, Google Mobile Ads) kendi lisanslarına tabidir.
+Third-party packages included in this repository (Joystick Pack, Unity Standard Assets, Google Mobile Ads) are subject to their own licenses.
